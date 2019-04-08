@@ -29,5 +29,6 @@ if [ "$1" == "resetuser" ]; then
         exit 1
     fi
     deluser $2
+    rm -frv /home/$2
     adduser $2
 fi
