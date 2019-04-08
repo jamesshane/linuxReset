@@ -28,10 +28,6 @@ if [ "$1" == "resetuser" ]; then
         echo "need user name: e.g. resetuser username"
         exit 1
     fi
-    cd /home/$2
-    rm -fr *
-    rm -fr .*
-    cp /etc/skel/.* .
-    chown $2:$2 /home/$2/.*
-    chsh -s /bin/bash $2
+    deluser $2
+    adduser $2
 fi
