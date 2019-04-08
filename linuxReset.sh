@@ -19,7 +19,7 @@ if [ "$1" == "downstage" ]; then
     fi
     dpkg --clear-selections
     dpkg --set-selections < $2
-    apt-get dselect-upgrade
+    dpkg --purge `dpkg --get-selections | grep deinstall | cut -f1`
     echo "I'd reboot."
 fi
 
