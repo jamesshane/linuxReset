@@ -5,7 +5,7 @@ if [ "$1" == "" ]; then
 fi
 
 if [ "$1" == "makestage" ]; then
-    if [ "$2" != ""]; then
+    if [ "$2" == ""]; then
         echo "need file name: e.g. makestage stage1"
         exit 1
     fi
@@ -13,7 +13,7 @@ if [ "$1" == "makestage" ]; then
 fi
 
 if [ "$1" == "downstage" ]; then
-    if [ "$2" != ""]; then
+    if [ "$2" == ""]; then
         echo "need file name: e.g. downstage stage1"
         exit 1
     fi
@@ -24,7 +24,7 @@ if [ "$1" == "downstage" ]; then
 fi
 
 if [ "$1" == "resetuser" ]; then
-    if [ "$2" != ""]; then
+    if [ "$2" == ""]; then
         echo "need user name: e.g. resetuser username"
         exit 1
     fi
